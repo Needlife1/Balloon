@@ -61,3 +61,21 @@ document.addEventListener("DOMContentLoaded", () => {
     });
   });
 });
+document.addEventListener("DOMContentLoaded", () => {
+  const currentPath = window.location.pathname;
+  const navLinks = document.querySelectorAll(".nav-link-mob, .nav-link");
+  const home = document.querySelector(".home");
+  navLinks.forEach((link) => {
+    const linkPath = link.getAttribute("href");
+    if (home) {
+      if (currentPath === "/index.html") {
+        home.style.display = "none";
+      } else {
+        home.style.display = "inline";
+      }
+    }
+    if (linkPath === currentPath) {
+      link.classList.add("active");
+    }
+  });
+});
