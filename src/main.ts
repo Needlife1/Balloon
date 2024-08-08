@@ -36,3 +36,26 @@ document.addEventListener('DOMContentLoaded', () => {
         });
     });
 });
+
+// -----------------
+document.addEventListener("DOMContentLoaded", () => {
+    const currentPath: string = window.location.pathname;
+    const navLinks: NodeListOf<HTMLAnchorElement> = document.querySelectorAll('.nav-link-mob, .nav-link');
+    const home: HTMLElement | null = document.querySelector('.home');
+
+    navLinks.forEach((link: HTMLAnchorElement) => {
+        const linkPath: string | null = link.getAttribute('href');
+
+        if (home) {
+            if (currentPath === '/index.html') {
+                home.style.display = 'none';
+            } else {
+                home.style.display = 'inline';
+            }
+        }
+
+        if (linkPath === currentPath) {
+            link.classList.add('active');
+        }
+    });
+});

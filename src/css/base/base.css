@@ -116,3 +116,8 @@ h3{
   .no-scroll {
     overflow: hidden;
   }
+
+  .nav-link.active {
+    border-bottom: 2px solid var(--bg-accent-color); /* красная полоска под активной ссылкой */
+    color: var(--bg-accent-color) /* можно изменить цвет текста */
+}
