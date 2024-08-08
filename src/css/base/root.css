@@ -1,0 +1,17 @@
+:root {
+    /* 
+    --light-secondarily: azure;
+    --accent-color-secondarily: #dfa297;
+    --green-primarily: #42900e;
+    --gray-primarily: rgb(101, 99, 99);
+    --gray-secondarily: #bebebe; */
+
+    --bg-accent-color:#5acaf6;
+    --light-primary: #fff;
+    --accent-color: #f33ea0;
+    --accent-color-secondarily: #ed3a98;
+    --dark-primary: #000000;
+    --border-color: #ddd;
+    --bg-td:#f9f9f9;
+}
+

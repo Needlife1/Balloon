@@ -1,0 +1,83 @@
+table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-bottom: 20px;
+}
+
+table, thead, th, td, tr {
+    display: block;
+}
+
+tbody{
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+td {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    border: 1px solid var(--border-color);
+    background-color: var(--bg-td);
+    padding: 0px 10px 10px 0px;
+
+    @media (min-width: 992px) {
+        flex-direction: row;
+        justify-content: space-between;
+        padding: 10px 10px 10px 0px;
+    }
+}
+
+td:before {
+    content: attr(data-label);
+    font-weight: bold;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: linear-gradient(145deg, var(--accent-color), var(--accent-color-secondarily));
+    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.2), inset 0px -3px 6px rgba(0, 0, 0, 0.3), inset 0px 3px 6px rgba(255, 255, 255, 0.3);
+    color: var(--light-primary);
+    padding: 10px;
+    margin-right: 10px;
+    margin-bottom: 15px;
+    border-right: 1px solid var(--border-color);
+    border-radius: 15px;
+}
+
+@media (min-width: 992px) {
+    td:before {
+        flex: 0 0 120px;
+        margin-bottom: 0;
+        border-radius: 0 15px 15px 0;
+    }
+}
+
+.content-center {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    width: 100%;
+}
+
+.content-center > a {
+    font-size: 18px;
+    font-weight: 600;
+    text-align: center;
+  
+    transition: all 0.3s ease;
+
+
+    @media (min-width: 992px) {
+        font-size: 26px; 
+    }
+}
+
+.content-center > a:hover{
+    &:hover{
+        color: var(--bg-accent-color);
+        text-decoration: underline;
+    }
+}
