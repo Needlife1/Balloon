@@ -40,18 +40,24 @@ document.addEventListener('DOMContentLoaded', () => {
 // -----------------
 document.addEventListener("DOMContentLoaded", () => {
     const currentPath: string = window.location.pathname;
+    const homeItems: NodeListOf<HTMLElement> = document.querySelectorAll('.home');
+
+   if (currentPath === '/index.html' || currentPath === '/') {
+        homeItems.forEach((home) => {
+            home.style.display = 'none';
+        });
+    } else {
+        homeItems.forEach((home) => {
+            home.style.display = 'block';
+        });
+    }
+
     const navLinks: NodeListOf<HTMLAnchorElement> = document.querySelectorAll('.nav-link-mob, .nav-link');
-    const home: HTMLElement | null = document.querySelector('.home');
 
     navLinks.forEach((link: HTMLAnchorElement) => {
-        const linkPath: string | null = link.getAttribute('href');
-
-        if (home) {
-            if (currentPath === '/index.html') {
-                home.style.display = 'none';
-            } else {
-                home.style.display = 'inline';
-            }
+        let linkPath: string | null = link.getAttribute('href');
+        if (linkPath) {
+            linkPath = linkPath.replace('.', '');
         }
 
         if (linkPath === currentPath) {
