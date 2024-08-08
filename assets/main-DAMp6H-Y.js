@@ -63,16 +63,21 @@ document.addEventListener("DOMContentLoaded", () => {
 });
 document.addEventListener("DOMContentLoaded", () => {
   const currentPath = window.location.pathname;
+  const homeItems = document.querySelectorAll(".home");
+  if (currentPath === "/index.html" || currentPath === "/") {
+    homeItems.forEach((home) => {
+      home.style.display = "none";
+    });
+  } else {
+    homeItems.forEach((home) => {
+      home.style.display = "block";
+    });
+  }
   const navLinks = document.querySelectorAll(".nav-link-mob, .nav-link");
-  const home = document.querySelector(".home");
   navLinks.forEach((link) => {
-    const linkPath = link.getAttribute("href");
-    if (home) {
-      if (currentPath === "/index.html") {
-        home.style.display = "none";
-      } else {
-        home.style.display = "inline";
-      }
+    let linkPath = link.getAttribute("href");
+    if (linkPath) {
+      linkPath = linkPath.replace(".", "");
     }
     if (linkPath === currentPath) {
       link.classList.add("active");
