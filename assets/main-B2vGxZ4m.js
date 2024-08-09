@@ -62,9 +62,10 @@ document.addEventListener("DOMContentLoaded", () => {
   });
 });
 document.addEventListener("DOMContentLoaded", () => {
+  const baseDir = window.location.pathname.replace(/\/[^\/]*$/, "");
   const currentPath = window.location.pathname;
   const homeItems = document.querySelectorAll(".home");
-  if (currentPath === "/index.html" || currentPath === "/") {
+  if (currentPath === `${baseDir}/` || currentPath === `${baseDir}/index.html`) {
     homeItems.forEach((home) => {
       home.style.display = "none";
     });
@@ -74,10 +75,11 @@ document.addEventListener("DOMContentLoaded", () => {
     });
   }
   const navLinks = document.querySelectorAll(".nav-link-mob, .nav-link");
+  console.log(navLinks);
   navLinks.forEach((link) => {
     let linkPath = link.getAttribute("href");
     if (linkPath) {
-      linkPath = linkPath.replace(".", "");
+      linkPath = `${baseDir}${linkPath.replace("./", "/")}`;
     }
     if (linkPath === currentPath) {
       link.classList.add("active");
