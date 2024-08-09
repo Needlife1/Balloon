@@ -38,11 +38,7 @@ h3{
     background-color:var(--btn-color);
     color: var(--light-primary);
     text-transform: uppercase;
-   box-shadow: 
-    0 0 1em .25em rgba(255, 0, 0, 0.5), 
-    0 0 4em .5em rgba(255, 0, 0, 0.3),   
-    inset 0 0 .75em .25em rgba(255, 0, 0, 0.4); 
-    cursor: pointer;
+   cursor: pointer;
     display: flex;
     align-items: center;
     justify-content: center;
