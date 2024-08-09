@@ -31,19 +31,22 @@ h3{
 
 .btn {
     position: relative;
-    width: 190px;
+    width: 220px;
     height: 65px;
     border-radius: 45px;
     border: none;
-    background-color: var(--bg-accent-color);
+    background-color:var(--btn-color);
     color: var(--light-primary);
-    box-shadow: 0px 10px 10px #5acaf6 inset,
-    0px 5px 10px rgba(5, 5, 5, 0.212),
-    0px -10px 10px #5acaf6 inset;
+    text-transform: uppercase;
+   box-shadow: 
+    0 0 1em .25em rgba(255, 0, 0, 0.5), 
+    0 0 4em .5em rgba(255, 0, 0, 0.3),   
+    inset 0 0 .75em .25em rgba(255, 0, 0, 0.4); 
     cursor: pointer;
     display: flex;
     align-items: center;
     justify-content: center;
+    transition: all 0.3s ease;
   }
   
   .btn::before {
@@ -69,39 +72,9 @@ h3{
   }
   
   .btn:hover {
-    animation: jello-horizontal 0.9s both;
+    transform: scale(1.1);
   }
   
-  @keyframes jello-horizontal {
-    0% {
-      transform: scale3d(1, 1, 1);
-    }
-  
-    30% {
-      transform: scale3d(1.25, 0.75, 1);
-    }
-  
-    40% {
-      transform: scale3d(0.75, 1.25, 1);
-    }
-  
-    50% {
-      transform: scale3d(1.15, 0.85, 1);
-    }
-  
-    65% {
-      transform: scale3d(0.95, 1.05, 1);
-    }
-  
-    75% {
-      transform: scale3d(1.05, 0.95, 1);
-    }
-  
-    100% {
-      transform: scale3d(1, 1, 1);
-    }
-  }
-
   .img-box{
     max-width: 300px;
     border-radius: 15px;
@@ -118,6 +91,14 @@ h3{
   }
 
   .nav-link.active {
-    border-bottom: 2px solid var(--bg-accent-color); /* красная полоска под активной ссылкой */
-    color: var(--bg-accent-color) /* можно изменить цвет текста */
+    border-bottom: 2px solid var(--bg-accent-color);
+    color: var(--bg-accent-color);
+    
 }
+
+.nav-link-mob.active {
+  border-bottom: 2px solid var(--bg-td);
+  color: var(--bg-td);
+  
+}
+

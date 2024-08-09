@@ -8,3 +8,17 @@
 .footer-text{
 font-size: 12px;
 }
+
+.footer-payment-box {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    justify-content: center;
+    align-items: center;
+}
+
+.footer-payment-list {
+    display: flex;
+    gap: 10px;
+    margin-bottom: 10px;
+}

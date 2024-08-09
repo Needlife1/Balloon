@@ -37,12 +37,14 @@ document.addEventListener('DOMContentLoaded', () => {
     });
 });
 
-// -----------------
+// -----------activLink-------
+
 document.addEventListener("DOMContentLoaded", () => {
+    const baseDir: string = window.location.pathname.replace(/\/[^\/]*$/, '');
     const currentPath: string = window.location.pathname;
     const homeItems: NodeListOf<HTMLElement> = document.querySelectorAll('.home');
 
-   if (currentPath === '/index.html' || currentPath === '/') {
+    if (currentPath === `${baseDir}/` || currentPath === `${baseDir}/index.html`) {
         homeItems.forEach((home) => {
             home.style.display = 'none';
         });
@@ -53,11 +55,13 @@ document.addEventListener("DOMContentLoaded", () => {
     }
 
     const navLinks: NodeListOf<HTMLAnchorElement> = document.querySelectorAll('.nav-link-mob, .nav-link');
+console.log(navLinks);
 
     navLinks.forEach((link: HTMLAnchorElement) => {
         let linkPath: string | null = link.getAttribute('href');
         if (linkPath) {
-            linkPath = linkPath.replace('.', '');
+
+            linkPath = `${baseDir}${linkPath.replace('./', '/')}`;
         }
 
         if (linkPath === currentPath) {

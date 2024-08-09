@@ -1,0 +1,38 @@
+
+@media (min-width:992px) {
+    .download-box{
+        display: flex;
+        gap: 20px;
+    }
+}
+
+.download p {
+    margin-top: 15px;
+    margin-bottom: 15px;
+}
+.download-top {
+    border: 1px solid var(--border-color);
+    padding: 5px;
+    margin-bottom: 15px;
+
+    @media (min-width:992px) {
+        width: 50%;
+      }
+}
+
+.download-android-list>li {
+    margin-bottom: 15px;
+}
+
+.download-list>li>span {
+   color: var(--btn-color);
+}
+
+.download-bottom {
+    border: 1px solid var(--border-color);
+    padding: 5px;
+
+    @media (min-width:992px) {
+      width: 50%;
+    }
+}
