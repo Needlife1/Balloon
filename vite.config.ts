@@ -11,7 +11,7 @@ export default defineConfig(({ command }) => {
         [command === 'serve' ? 'global' : '_global']: {},
       },
     },
-    base: './',
+    // base: './',
     plugins: [
       injectHTML(),
       FullReload(['./src/**/*.{html,css,js,ts}']),
