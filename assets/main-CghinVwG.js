@@ -65,17 +65,19 @@ document.addEventListener("DOMContentLoaded", () => {
   const baseDir = window.location.pathname.replace(/\/[^\/]*$/, "");
   const currentPath = window.location.pathname;
   const homeItems = document.querySelectorAll(".home");
+  const logo = document.querySelector(".logo-link");
   if (currentPath === `${baseDir}/` || currentPath === `${baseDir}/index.html`) {
     homeItems.forEach((home) => {
       home.style.display = "none";
+      logo.href = "";
     });
   } else {
     homeItems.forEach((home) => {
       home.style.display = "block";
+      logo.href = "./index.html";
     });
   }
   const navLinks = document.querySelectorAll(".nav-link-mob, .nav-link");
-  console.log(navLinks);
   navLinks.forEach((link) => {
     let linkPath = link.getAttribute("href");
     if (linkPath) {
@@ -85,4 +87,11 @@ document.addEventListener("DOMContentLoaded", () => {
       link.classList.add("active");
     }
   });
+  const iframe = document.getElementById("gameIframe");
+  const placeholder = document.getElementById("placeholder");
+  iframe.src = "https://server.ssg-public.com/SmartSoftGamePlay/authorization.aspx?GameName=Balloon";
+  iframe.onload = function() {
+    placeholder.style.display = "none";
+    iframe.style.display = "block";
+  };
 });
