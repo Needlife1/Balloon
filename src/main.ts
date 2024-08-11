@@ -54,7 +54,7 @@ document.addEventListener("DOMContentLoaded", () => {
     } else {
         homeItems.forEach((home) => {
             home.style.display = 'block';
-            logo.href= './index.html';
+            logo.href= 'https://balonoyunubahis.com/';
         });
     }
 
