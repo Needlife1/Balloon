@@ -66,15 +66,18 @@ document.addEventListener("DOMContentLoaded", () => {
   const currentPath = window.location.pathname;
   const homeItems = document.querySelectorAll(".home");
   const logo = document.querySelector(".logo-link");
+  const logoImg = document.querySelector(".logo");
   if (currentPath === `${baseDir}/` || currentPath === `${baseDir}/index.html`) {
     homeItems.forEach((home) => {
       home.style.display = "none";
-      logo.href = "";
+      logo.style.display = "none";
+      logoImg.style.display = "block";
     });
   } else {
     homeItems.forEach((home) => {
       home.style.display = "block";
-      logo.href = "https://balonoyunubahis.com/";
+      logo.style.display = "block";
+      logoImg.style.display = "none";
     });
   }
   const navLinks = document.querySelectorAll(".nav-link-mob, .nav-link");

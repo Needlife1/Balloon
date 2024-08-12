@@ -457,7 +457,7 @@ h3{
 
 .btn {
     position: relative;
-    width: 220px;
+    width: 250px;
     height: 65px;
     border-radius: 45px;
     border: none;
@@ -469,6 +469,7 @@ h3{
     align-items: center;
     justify-content: center;
     transition: all 0.3s ease;
+    font-weight: 900;
   }
 
 .btn::before {
@@ -709,6 +710,9 @@ font-size: 12px;
     display: flex;
     gap: 10px;
     margin-bottom: 10px;
+    flex-wrap: wrap;
+    align-items: flex-end;
+    justify-content: center;
 }
 
 @media(min-width:992px){
