@@ -23,4 +23,8 @@ RewriteRule ^(.*)index\.html$ /$1 [R=301,L]
 
     # Политика относительно Referrer
     Header always set Referrer-Policy "strict-origin-when-cross-origin"
+
+        # Content-Security-Policy
+    Header always set Content-Security-Policy "default-src 'self'; script-src 'self' https://trusted-cdn.com; style-src 'self' https://trusted-cdn.com; frame-src 'self' https://server.ssg-public.com"
+
 </IfModule>
