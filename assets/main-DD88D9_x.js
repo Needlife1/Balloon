@@ -42,7 +42,6 @@ const body = document.querySelector("body");
 burgerBtn == null ? void 0 : burgerBtn.addEventListener("click", toggleNav);
 navBtnClose == null ? void 0 : navBtnClose.addEventListener("click", toggleNav);
 function toggleNav() {
-  console.log("poop");
   navMobBox == null ? void 0 : navMobBox.classList.toggle("is-visible");
   body == null ? void 0 : body.classList.toggle("no-scroll");
 }
@@ -90,11 +89,4 @@ document.addEventListener("DOMContentLoaded", () => {
       link.classList.add("active");
     }
   });
-  const iframe = document.getElementById("gameIframe");
-  const placeholder = document.getElementById("placeholder");
-  iframe.src = "https://server.ssg-public.com/SmartSoftGamePlay/authorization.aspx?GameName=Balloon";
-  iframe.onload = function() {
-    placeholder.style.display = "none";
-    iframe.style.display = "block";
-  };
 });
