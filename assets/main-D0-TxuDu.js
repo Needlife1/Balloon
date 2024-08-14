@@ -39,23 +39,19 @@ const burgerBtn = document.querySelector(".burger-btn");
 const navMobBox = document.querySelector(".nav-mob");
 const navBtnClose = document.querySelector(".nav-btn-close");
 const body = document.querySelector("body");
-burgerBtn == null ? void 0 : burgerBtn.addEventListener("click", toggleNav);
-navBtnClose == null ? void 0 : navBtnClose.addEventListener("click", toggleNav);
 function toggleNav() {
   navMobBox == null ? void 0 : navMobBox.classList.toggle("is-visible");
   body == null ? void 0 : body.classList.toggle("no-scroll");
 }
+burgerBtn == null ? void 0 : burgerBtn.addEventListener("click", toggleNav);
+navBtnClose == null ? void 0 : navBtnClose.addEventListener("click", toggleNav);
 document.addEventListener("DOMContentLoaded", () => {
   const questionsTitles = document.querySelectorAll(".questions-title");
   questionsTitles.forEach((title) => {
     title.addEventListener("click", function() {
       const content = this.nextElementSibling;
       if (content) {
-        if (content.style.display === "block") {
-          content.style.display = "none";
-        } else {
-          content.style.display = "block";
-        }
+        content.style.display = content.style.display === "block" ? "none" : "block";
       }
     });
   });
@@ -67,17 +63,13 @@ document.addEventListener("DOMContentLoaded", () => {
   const logo = document.querySelector(".logo-link");
   const logoImg = document.querySelector(".logo");
   if (currentPath === `${baseDir}/` || currentPath === `${baseDir}/index.html`) {
-    homeItems.forEach((home) => {
-      home.style.display = "none";
-      logo.style.display = "none";
-      logoImg.style.display = "block";
-    });
+    homeItems.forEach((home) => home.style.display = "none");
+    if (logo) logo.style.display = "none";
+    if (logoImg) logoImg.style.display = "block";
   } else {
-    homeItems.forEach((home) => {
-      home.style.display = "block";
-      logo.style.display = "block";
-      logoImg.style.display = "none";
-    });
+    homeItems.forEach((home) => home.style.display = "block");
+    if (logo) logo.style.display = "block";
+    if (logoImg) logoImg.style.display = "none";
   }
   const navLinks = document.querySelectorAll(".nav-link-mob, .nav-link");
   navLinks.forEach((link) => {
