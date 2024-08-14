@@ -12,8 +12,6 @@ burgerBtn?.addEventListener('click', toggleNav);
 navBtnClose?.addEventListener('click', toggleNav);
 
 function toggleNav() {
-    console.log('poop');
-    
     navMobBox?.classList.toggle('is-visible');
     body?.classList.toggle('no-scroll');
 }
@@ -78,15 +76,15 @@ document.addEventListener("DOMContentLoaded", () => {
 
 //----------iframe------------
 
-const iframe = document.getElementById("gameIframe") as HTMLIFrameElement;
-const placeholder:HTMLElement = document.getElementById("placeholder")!;
+// const iframe = document.getElementById("gameIframe") as HTMLIFrameElement;
+// const placeholder:HTMLElement = document.getElementById("placeholder")!;
  
-     iframe.src = "https://server.ssg-public.com/SmartSoftGamePlay/authorization.aspx?GameName=Balloon";
+//      iframe.src = "https://server.ssg-public.com/SmartSoftGamePlay/authorization.aspx?GameName=Balloon";
 
-     iframe.onload = function() {
-         placeholder.style.display = "none";
-         iframe.style.display = "block";
-     };
+//      iframe.onload = function() {
+//          placeholder.style.display = "none";
+//          iframe.style.display = "block";
+//      };
 
 });
 
