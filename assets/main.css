@@ -284,6 +284,7 @@ summary {
     --border-color: #ddd;
     --bg-td:#f9f9f9;
     --btn-color:#e40310;
+    --bg-gradient: linear-gradient(to bottom, #b0b0b0, #707070);
 }
 
 /***
@@ -541,15 +542,15 @@ h3{
     position: fixed;
     background-color: var(--light-primary);
     width: 100%;
-   padding: 10px 15px;
-  box-shadow: 0 0 15px 0 rgba(0, 0, 0, .3);
-  z-index: 998;
+   padding: 10px 35px 10px 15px;
+   box-shadow: 0 0 15px 0 rgba(0, 0, 0, .3);
+   z-index: 998;
 }
 
 .header-container {
     display: flex;
     align-items: center;
-    justify-content: space-around;
+    justify-content: space-between;
 
     @media(min-width:992px){
      justify-content: space-evenly;
@@ -587,6 +588,11 @@ transition: all 0.3s ease;
 }
 
 .burger-btn {
+    height: auto;
+display: flex;
+flex-direction: column;
+gap: 4px;
+align-items: center;
     @media (min-width:992px) {
         display: none;
     }
@@ -618,6 +624,14 @@ right: 40px;;
     align-items: center;
     justify-content: center;
     gap: 20px;
+}
+
+.top-line, .middle-line,.botton-line {
+    display: block;
+    width: 20px;
+    height: 1.5px;
+    border-radius: 15px;
+    background-color: black;
 }
 
 .choose-list {
@@ -698,6 +712,8 @@ right: 40px;;
     padding: 25px;
     text-align: center;
     box-shadow: 0 0 15px 0 rgba(0, 0, 0, .3);
+    background: var( --bg-gradient);
+    color: var(--light-primary);
 }
 
 .footer-text{
