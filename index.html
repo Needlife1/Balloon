@@ -16,12 +16,12 @@
 
     <link rel="canonical" href="https://balonoyunubahis.com/">
     
-    <link rel="icon" href="./assets/balloon-ico.ico" type="image/x-icon">
-    <link rel="apple-touch-icon" href="./assets/balloon-ico.ico">
-    <link rel="icon" href="./assets/balloon-ico.ico" sizes="192x192">
+    <link rel="icon" href="./src/img/balloon-ico.ico" type="image/x-icon">
+    <link rel="apple-touch-icon" href="./src/img/balloon-ico.ico">
+    <link rel="icon" href="./src/img/balloon-ico.ico" sizes="192x192">
     <link rel="amphtml" href="https://balonoyunubahis.com/amp/">
 
-<meta property="og:locale" content="tr_TR">
+ <meta property="og:locale" content="tr_TR">
 <meta property="og:type" content="website">
 <meta property="og:title" content="🎈Balloon Oyunu">
 <meta property="og:description" content="En popüler Balloon oyunu.">
@@ -79,7 +79,7 @@
 }
 </script>
     
-    <script type="module" crossorigin src="./assets/main-D0-TxuDu.js"></script>
+    <script type="module" crossorigin src="./assets/main-Bm5-KZan.js"></script>
     <link rel="stylesheet" crossorigin href="./assets/main.css">
   </head>
   <body>
@@ -131,7 +131,7 @@
             </ul>
      </nav>
 
-     <button class="burger-btn">
+     <button class="burger-btn" type="button">
       <svg width="24" height="24">
         <use href="./assets/burger_line_list_menu_nav_navigation_option_icon_123231.svg#burger"></use>
       </svg>
@@ -140,7 +140,7 @@
     </div>
 
     <nav class="nav-mob">
-      <button class="nav-btn-close">
+      <button class="nav-btn-close" type="button">
         <svg width="24" height="24">
         <use href="./assets/close_cross_icon_128690.svg#close"></use>
         </svg>
@@ -175,12 +175,14 @@
       <section class="section section-top hero">
         <div class="hero-box">
           <h1>Balloon Oyunu: Hemen Şimdi Gerçek Parayla Oynamaya Başlayın</h1>
-          <p>Balloon bahis oyunu, basit ve eğlenceli bir yapıya sahiptir. Bu oyun, kumar dünyasına heyecan verici bir giriş sağlar. Oyun sırasında balonu şişirirsiniz ve doğru anda durarak kazancınızı toplarsınız. Önemli olan, balon patlamadan önce durmaktır. Bu oyun, hem büyük kazançlar elde etme fırsatı sunar, hem de unutulmaz oyun deneyimleri yaşatır. Oyunun heyecanı ve stratejisi, oyunculara benzersiz bir deneyim sunar.</p>
+          <p>Balloon bahis oyunu, basit ve eğlenceli bir yapıya sahiptir. Bu oyun, kumar dünyasına heyecan verici bir giriş sağlar. Oyun sırasında balonu şişirirsiniz ve doğru anda durarak kazancınızı 
+            toplarsınız. Önemli olan, balon patlamadan önce durmaktır. Bu oyun, hem büyük kazançlar elde etme fırsatı sunar, hem de unutulmaz oyun deneyimleri yaşatır. Oyunun heyecanı ve stratejisi, 
+            oyunculara benzersiz bir deneyim sunar.</p>
           <a class="hero-btn btn" href="https://balonoyunubahis.com/pinup" target="_blank" rel="noopener noreferrer nofollow">Balloon'da bonus al</a>
         </div>
-        <div class="img-box">
-          <img class="main-img" src="./assets/balloon-logo-2-1_waifu2x_art_noise2_scale_11zon_11zon.webp" alt="Balloon Oyunu: Balon Şişirme ve Patlatma Üzerine Bahisler" width="250" height="250">
-        </div>
+       
+          <img style="display: block; margin: 0 auto;" src="./assets/balloon-logo-2-1_waifu2x_art_noise2_scale_11zon_11zon.webp" alt="Balloon Oyunu: Balon Şişirme ve Patlatma Üzerine Bahisler" width="250" height="250">
+       
       </section>
     
       <section class="section">
@@ -260,15 +262,13 @@
             <p>Aşağıdaki videoda, balon patlatma kumar oyununun nasıl geçtiğini izleyebilirsiniz. 10'dan fazla bahis yaptım ve hiç kaybetmedim!
               200 lira bahis yapıyordum ve her seferinde 203, 205, 210 lira kazandım. Oyun gerçekten para kazandırıyor, siz de kendiniz görün:</p>
               <a class="hero-btn btn" href="https://balonoyunubahis.com/pinup" target="_blank" rel="noopener noreferrer nofollow">Para ile oynamak</a>
-    
-           <div style="position: relative; padding-bottom: 56.25%; height: 0; overflow: hidden; max-width: 100%; background: #000; margin-top: 15px;">
-            <iframe id="youtubeVideo" 
-                    src="https://www.youtube.com/embed/5fCLvxY1IO0?autoplay=1&mute=1&controls=0&modestbranding=1&rel=0" 
-                    frameborder="0" allow="autoplay; encrypted-media" 
-                    allowfullscreen 
-                    style="position: absolute; top: 0; left: 0; width: 100%; height: 100%;">
-            </iframe>
-        </div>
+
+        <div id="youtube-facade" style="position: relative; padding-bottom: 56.25%; height: 0; overflow: hidden; max-width: 100%; background: #000; margin-top: 15px; cursor: pointer;">
+          <!-- Обложка видео -->
+          <img src="./assets/main.webp" alt="YouTube Video" style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; object-fit: cover;" loading="lazy">
+          <!-- Иконка кнопки воспроизведения -->
+          <div class="main-icon-uoutube"></div>
+      </div>
  
           <p style="margin-top: 15px; font-weight: 600;">Minimum bahis - 0,50 lira, maksimum ise 20.000 lira.</p>
           <p>Balon patlatma oyunu kumar dünyasında hızla popülerlik kazanıyor. Oyuncular, balonun ne zaman patlayacağını tahmin ederek büyük kazançlar elde edebilirler. Bu heyecan verici oyun, hem eğlenceli vakit geçirmenizi sağlar hem de şansınızı deneyerek para kazanma fırsatı sunar. Minimum bahislerle başlayabilir ve şansınızı deneyerek büyük ödüller kazanabilirsiniz</p>
@@ -356,7 +356,7 @@
   </div>
 
  <div>
-    <div class="footer-img-box"><img src="./assets/18plus.webp" alt="18+" width="70" height="70"></div>
+    <div class="footer-img-box"><img src="./assets/18plus.webp" alt="18+" width="70" height="70" loading="lazy"></div>
   
     <p class="footer-text">2024, All rights reserved</p>
  </div>
