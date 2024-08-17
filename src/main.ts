@@ -1,5 +1,4 @@
 import './style.css';
-
 // Открытие/закрытие бургер-меню
 const burgerBtn: HTMLElement | null = document.querySelector('.burger-btn');
 const navMobBox: HTMLElement | null = document.querySelector('.nav-mob');
@@ -13,7 +12,6 @@ function toggleNav() {
 
 burgerBtn?.addEventListener('click', toggleNav);
 navBtnClose?.addEventListener('click', toggleNav);
-
 // Выпадающие элементы
 document.addEventListener('DOMContentLoaded', () => {
     const questionsTitles = document.querySelectorAll<HTMLElement>('.questions-title');
@@ -27,7 +25,6 @@ document.addEventListener('DOMContentLoaded', () => {
         });
     });
 });
-
 // Активация ссылок в меню
 document.addEventListener("DOMContentLoaded", () => {
     const baseDir: string = window.location.pathname.replace(/\/[^\/]*$/, '');
@@ -59,3 +56,25 @@ document.addEventListener("DOMContentLoaded", () => {
         }
     });
 });
+// -------------lazy-iframe----------------
+const facadeElement = document.getElementById('youtube-facade');
+if (facadeElement) {
+    facadeElement.addEventListener('click', function() {
+
+        const iframe = document.createElement('iframe');
+
+        iframe.setAttribute('src', 'https://www.youtube.com/embed/5fCLvxY1IO0?autoplay=1&mute=1&controls=0&modestbranding=1&rel=0');
+        iframe.setAttribute('frameborder', '0');
+        iframe.setAttribute('allow', 'autoplay; encrypted-media');
+        iframe.setAttribute('allowfullscreen', '');
+
+        iframe.style.position = 'absolute';
+        iframe.style.top = '0';
+        iframe.style.left = '0';
+        iframe.style.width = '100%';
+        iframe.style.height = '100%';
+
+        this.innerHTML = '';
+        this.appendChild(iframe);
+    });
+};
