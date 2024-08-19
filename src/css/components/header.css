@@ -49,7 +49,7 @@ transition: all 0.3s ease;
 }
 
 .burger-btn {
-    height: auto;
+height: auto;
 display: flex;
 flex-direction: column;
 gap: 4px;
@@ -87,7 +87,7 @@ right: 40px;;
     gap: 20px;
 }
 
-.top-line, .middle-line,.botton-line {
+.top-line, .middle-line,.bottom-line {
     display: block;
     width: 20px;
     height: 1.5px;
