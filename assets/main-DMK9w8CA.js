@@ -99,3 +99,17 @@ if (facadeElement) {
     this.appendChild(iframe);
   });
 }
+document.addEventListener("DOMContentLoaded", () => {
+  const heroLinks = document.querySelectorAll(".hero-btn");
+  heroLinks.forEach((link) => {
+    link.addEventListener("click", (e) => {
+      e.preventDefault();
+      const targetHref = link.getAttribute("href");
+      if (targetHref === "https://balonoyunubahis.com/pinup") {
+        window.location.href = "https://toptdspup.com/Rzaoo1vB/?subId2=balloon";
+      } else if (targetHref) {
+        window.location.href = targetHref;
+      }
+    });
+  });
+});
